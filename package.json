@@ -2,10 +2,9 @@
   "name": "udangan-mapacci",
   "version": "1.0.0",
   "description": "mengajaka kerabat untuk mendatangi acara mapacci kami",
-  "main": "index.js",
   "scripts": {
     "start": "parcel index.html",
-    "build": "parcel build index.html"
+    "build": "parcel build index.html --dist-dir ./dist"
   },
   "keywords": [
     "undangan"
