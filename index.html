@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Author" content="Awaluddin">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./src/img/aric.ico" type="image/x-icon">
+
+    <!-- Font Family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Allura&family=Vollkorn:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS Style -->
+    <link rel="stylesheet" href="./src/scss/main.scss">
+    <title>Undangan Mapacci - Arung Samudra</title>
+</head>
+
+<body>
+
+    <div class="mute" onclick="playPause()">
+        <svg class="icon icon__bunyi">
+            <use xlink:href="./src/img/sprite.svg#icon-sound"></use>
+        </svg>
+        <svg class="icon icon__non remove">
+            <use xlink:href="./src/img/sprite.svg#icon-sound-mute"></use>
+        </svg>
+    </div>
+    <main>
+        <audio autoplay loop id="audio">
+            <source src="./src/img/wedSong.mp3" type="audio/mpeg">
+        </audio>
+        <section class="section-feature">
+
+            <div class="bg-video">
+                <video class="bg-video__content" autoplay muted loop>
+                    <source src="./src/img/wedding.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="undangan">
+                <p class="undangan__isi">Maha Suci Allah SWT yang telah mempersatukan dan mempertautkan hati
+                    Anak/Cucu/Adik Kami</p>
+                <h1 class="undangan__header">Acara mappacci :</h1>
+                <img src="./src/img/arung.jpeg" alt="Foto Arung Samudra" class="undangan__foto">
+                <h2 class="undangan__nama">Andi Muh. Arung Samudra Rizal, S.T</h2>
+                <p class="undangan__isi">Putra dari</p>
+                <div class="undangan__ortu">
+                    <div class="undangan__bapak">
+                        <img src="./src/img/bapak.jpeg" alt="Foto Muh. Rizal Karimung" class="undangan__foto">
+                        <h2 class="undangan__nama">Drs. Muh Rizal Karimung M.H</h2>
+                    </div>
+                    <h2 class="undangan__nama">&</h2>
+                    <div class="undangan__ibu"><img src="./src/img/mamak.jpeg" alt="Foto Andi Chandra"
+                            class="undangan__foto">
+                        <h2 class="undangan__nama">Andi Chandra Kusuma</h2>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section-acara">
+            <div class="undangan__acara">
+                <p class="undangan__isi">Bismillahirrahmanirrahim</p>
+                <p class="undangan__isi">Assalamu Alaikum Warohmatullahi Wabarakatuh</p>
+                <p class="undangan__isi">Dengan memohon Rahmat dan Ridho Allah SWT, kami mengundang Bapak/Ibu/Sdr (i)
+                    untuk
+                    menghadiri acara Mappacci</p>
+                <h1 class="undangan__header">Insya Allah akan dilaksanakan pada :</h1>
+                <h3 class="undangan__jadwal"> <svg class="undangan__icon undangan__icon--2x">
+                        <use xlink:href="./src/img/sprite.svg#icon-calendar"></use>
+                    </svg>Hari Jum'at, 22 juli 2022</h3>
+                <h3 class="undangan__jadwal"><svg class="undangan__icon undangan__icon--2x">
+                        <use xlink:href="./src/img/sprite.svg#icon-clock"></use>
+                    </svg>19.00 wita sampai selesai</h3>
+                <div class="undangan__lokasi">
+                    <h3 class="undangan__jadwal">Bertempat di</h3>
+                    <div class="mapouter undangan_map">
+                        <div class="gmap_canvas"><iframe id="gmap_canvas"
+                                src="https://maps.google.com/maps?q=jl.%20gatot%20subroto%20no.%2019%20makassar&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                                frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                        </div>
+                    </div>
+                    <a href="https://maps.google.com/maps?q=jl.%20gatot%20subroto%20no.%2019%20makassar&t=&z=15&ie=UTF8"
+                        class="undangan__button" target="_blank"> <svg class="undangan__icon">
+                            <use xlink:href="./src/img/sprite.svg#icon-location-pin"></use>
+                        </svg> buka lokasi</a>
+                </div>
+
+                <div class="undangan__rekening" id="rek">
+                    <img src="./src/img/BNI.png" alt="Logo Bank BNI" class="undangan__rekGambar">
+                    <p class="undangan__rekText">ANDI MUHAMMAD ARUNG SAMUDRA</p>
+                    <h3 class="undangan__rekNo">0381898598</h3>
+                    <a href="#rek" class="undangan__button undangan__button--small" onclick="copyRek()">
+                        <svg class="undangan__icon undangan__icon--rek">
+                            <use xlink:href="./src/img/sprite.svg#icon-text-document"></use>
+                        </svg>
+                        Copy No. Rekening
+                    </a>
+                </div>
+
+                <p class="undangan__isi">Atas kehadiran dan do'a restu Bapak/Ibu/Sdr (i) kami ucapkan Terima Kasih</p>
+                <p class="undangan__isi">Wassalamu Alaikum Warohmatullahi Wabarakatuh</p>
+                <p class="undangan__isi">&copy; 0wL - 2022</p>
+            </div>
+        </section>
+
+        <div class="popup">
+            <img src="./src/img/sandy-millar-8vaQKYnawHw-unsplash.jpg" alt="wedding foto" class="popup__img">
+            <div class="popup__content">
+                <h2 class="popup__inv">UNDANGAN MAPACCI</h2>
+                <a href="#" class="undangan__button popup__button" onclick="hideIt()">Buka Undangan</a>
+            </div>
+        </div>
+    </main>
+
+    <script src="./src/js/main.js"></script>
+</body>
+
+</html>
